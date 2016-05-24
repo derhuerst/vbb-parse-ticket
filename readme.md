@@ -2,7 +2,28 @@
 
 **Parse ticket information from the VBB HAFAS API.**
 
-todo: example
+```js
+{
+	  name:  'foo'
+	, price: 321
+	, shpCtx: '{"TLS": "B3TK"}'
+}
+```
+
+will be parsed to
+
+```js
+{
+	  name:      'foo'
+	, price:     3.21
+	, amount:    1
+	, fullDay:   true
+	, group:     true
+	, tariff:    'Berlin'
+	, coverage:  'ABC'
+	, variant:   '1 day, group'
+}
+```
 
 [![npm version](https://img.shields.io/npm/v/vbb-parse-ticket.svg)](https://www.npmjs.com/package/vbb-parse-ticket)
 [![build status](https://img.shields.io/travis/derhuerst/vbb-parse-ticket.svg)](https://travis-ci.org/derhuerst/vbb-parse-ticket)
