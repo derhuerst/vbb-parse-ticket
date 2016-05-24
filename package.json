@@ -3,7 +3,7 @@
 	"description":  "Parse ticket information from the VBB HAFAS API.",
 	"version":      "0.1.0",
 	"main":         "index.js",
-	"files":        ["index.js"],
+	"files":        ["index.js", "variants.js"],
 	"keywords":     ["vbb", "parse", "ticket", "hafas", "api"],
 	"author":       "Jannis R <mail@jannisr.de>",
 	"homepage":     "https://github.com/derhuerst/vbb-parse-ticket",
