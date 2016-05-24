@@ -1,7 +1,7 @@
 {
 	"name":         "vbb-parse-ticket",
 	"description":  "Parse ticket information from the VBB HAFAS API.",
-	"version":      "0.1.0",
+	"version":      "0.1.1",
 	"main":         "index.js",
 	"files":        ["index.js", "variants.js"],
 	"keywords":     ["vbb", "parse", "ticket", "hafas", "api"],
