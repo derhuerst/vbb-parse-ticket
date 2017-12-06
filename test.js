@@ -4,8 +4,13 @@
 const test  = require('tape')
 const parse = require('./index')
 
-const input = (name, price, tls) =>
-	({name, price: price * 100, shpCtx: JSON.stringify({TLS: tls})})
+const input = (name, price, tls) => {
+	return {
+		name,
+		price: price * 100,
+		shpCtx: JSON.stringify({TLS: tls})
+	}
+}
 
 test('B0E', (t) => {
 	t.plan(1)
@@ -58,5 +63,23 @@ test('P2ME', (t) => {
 		, tariff:    'Potsdam'
 		, coverage:  'BC'
 		, variant:   '4x reduced'
+	})
+})
+
+test('price in .prc', (t) => {
+	t.plan(1)
+	t.deepEqual(parse({
+		name: 'foo',
+		prc: 123,
+		shpCtx: JSON.stringify({TLS: 'B0E'})
+	}), {
+		  name: 'foo'
+		, price: 1.23
+		, amount: 1
+		, reduced: true
+		, shortTrip: true
+		, tariff: 'Berlin'
+		, coverage: 'short trip'
+		, variant: 'reduced'
 	})
 })

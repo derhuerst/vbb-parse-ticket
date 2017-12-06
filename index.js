@@ -37,7 +37,7 @@ coverages.V = coverages.S
 const parse = (t) => {
 	const ticket = {
 		  name:     t.name
-		, price:    t.price / 100
+		, price: (t.price || t.prc) / 100
 		, tariff:   null
 		, coverage: null
 	}
