@@ -30,6 +30,7 @@ will be parsed to
 [![dependency status](https://img.shields.io/david/derhuerst/vbb-parse-ticket.svg)](https://david-dm.org/derhuerst/vbb-parse-ticket)
 [![dev dependency status](https://img.shields.io/david/dev/derhuerst/vbb-parse-ticket.svg)](https://david-dm.org/derhuerst/vbb-parse-ticket#info=devDependencies)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/vbb-parse-ticket.svg)
+[![gitter channel](https://badges.gitter.im/derhuerst/vbb-rest.svg)](https://gitter.im/derhuerst/vbb-rest)
 
 
 ## Installing
