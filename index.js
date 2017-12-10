@@ -25,7 +25,7 @@ R[7] = '65-75km'; R[8] = '75-85km'; R[9] = '85-95km';
 const coverages = {
 	  B: ['short trip', 'AB', 'BC', 'ABC']
 	, S: [null, 'AB', 'BC', 'ABC']
-	, G: [null, 'Stadtverkehr']
+	, G: [null, 'urban area']
 	, L: [null, '2 zones', '3 zones', '4 zones']
 	, R: R
 	, M: ['urban area']
