@@ -83,3 +83,34 @@ test('price in .prc', (t) => {
 		, variant: 'reduced'
 	})
 })
+
+test('M0*', (t) => { // Szczecin/Stettin fares
+	// see also derhuerst/vbb-hafas#26
+	t.plan(1)
+	t.deepEqual(parse(input('foo', 1.23, 'M0T')), {
+		  name: 'foo'
+		, price: 1.23
+		, amount: 1
+		, fullDay: true
+		, tariff: 'Szczecin'
+		, coverage: 'urban area'
+		, variant: '1 day, adult'
+	})
+	// todo:
+	// { name: 'Regeltarif',
+	//   prc: 220,
+	//   cur: 'EUR',
+	//   shpCtx: '{"FV":"VBB-1","TC":"Bartarif","SW":"3473","ZW":"3473","TLS":"M0P","VT":""}' }
+	// { name: 'Ermäßigungstarif',
+	//   prc: 160,
+	//   cur: 'EUR',
+	//   shpCtx: '{"FV":"VBB-1","TC":"Bartarif","SW":"3473","ZW":"3473","TLS":"M0EP","VT":""}' }
+	// { name: 'Ermäßigungstarif',
+	//   prc: 190,
+	//   cur: 'EUR',
+	//   shpCtx: '{"FV":"VBB-1","TC":"Bartarif","SW":"3473","ZW":"3473","TLS":"M0TE","VT":""}' }
+	// { name: 'Standard',
+	//   prc: 640,
+	//   cur: 'EUR',
+	//   shpCtx: '{"FV":"VBB-1","TC":"Bartarif","SW":"3473","ZW":"3473","TLS":"M0TK","VT":""}' }
+})

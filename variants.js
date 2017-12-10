@@ -3,7 +3,7 @@
 const names = {
 	  '': 'adult'
 	, E:  'reduced'
-	, T:  '1 day'
+	, T:  '1 day, adult'
 	, F:  'bike'
 	, M:  '4x adult'
 	, ME: '4x reduced'

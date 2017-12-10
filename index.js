@@ -13,6 +13,7 @@ const tariffs = {
 	, V: 'Frankfurt (Oder)'
 	, L: 'rural area'
 	, R: 'rural area'
+	, M: 'Szczecin'
 }
 
 const R = []
@@ -27,6 +28,7 @@ const coverages = {
 	, G: [null, 'Stadtverkehr']
 	, L: [null, '2 zones', '3 zones', '4 zones']
 	, R: R
+	, M: ['urban area']
 }
 coverages.P = coverages.B
 coverages.C = coverages.S
@@ -53,9 +55,10 @@ const parse = (t) => {
 	if (tariff in tariffs) ticket.tariff = tariffs[tariff]
 
 	const coverage = parseInt(code[1])
-	if (coverage in coverages[tariff])
-		ticket.coverage = coverages[tariff][coverage]
-	if (coverage === 0) ticket.shortTrip = true
+	if (coverages[tariff] && (coverage in coverages[tariff])) {
+		ticket.coverage = coverages[tariff][coverage] || null
+	}
+	if (coverage === 0 && tariff !== 'M') ticket.shortTrip = true
 
 	return ticket
 }
